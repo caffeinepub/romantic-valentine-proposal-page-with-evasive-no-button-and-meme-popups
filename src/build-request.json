@@ -1,0 +1,60 @@
+{
+  "kind": "build_request",
+  "title": "Highlight Navera’s name in the main question and swap the Yes modal image to a more romantic one",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "text": "Update the main question headline in frontend/src/App.tsx to include the name \"Navera\" and add a clear, romantic highlight effect around the word \"Navera\" (e.g., soft glow + subtle underline/marker effect) while preserving the existing responsive layout and overall Valentine styling.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Yess add that highlight effect around her name in main question"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The main question text includes the name \"Navera\" and remains English.",
+        "Only the name \"Navera\" is visually highlighted (the rest of the headline keeps the existing style).",
+        "The highlight effect is visible in both light and dark mode and does not reduce readability.",
+        "Layout remains responsive across mobile/tablet/desktop and does not overlap the buttons container."
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Replace the image used in the \"Yes\" (Good Choice) modal with a new static image that feels romantic and caring, and update frontend/src/App.tsx to reference the new asset under /assets/generated/ while keeping the existing modal sizing (object-contain), rounded corners, and shadow styling.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "and change the Yes image to something romantic and caring way"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Good Choice modal no longer references /assets/generated/good-choice-meme-v2.dim_900x900.png and instead references the newly added romantic/caring image in frontend/public/assets/generated.",
+        "The image renders correctly on iPad Chrome with no stretching (uses object-contain) and no broken asset paths.",
+        "Existing modal layout, responsiveness, and rounded/shadow styling are preserved."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not add or modify backend functionality; backend/main.mo should remain unchanged.",
+    "Do not edit files in frontend/src/components/ui or other immutable paths (compose existing UI components instead).",
+    "All new/updated images must be stored as static assets under frontend/public/assets/generated and referenced directly from the frontend (no backend fetch)."
+  ],
+  "nonGoals": [
+    "Changing the No-button evasive behavior or the rotating No-meme cycle logic.",
+    "Adding new pages, routes, authentication flows, or any new application features beyond the requested visual tweaks.",
+    "Changing user-facing copy beyond what is necessary to include and highlight the name \"Navera\"."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Romantic and caring meme-style square image (good-choice-romantic-meme-v3.dim_900x900.png)"
+    ],
+    "edits": []
+  }
+}

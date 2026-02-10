@@ -1,2 +1,3 @@
-# romantic-valentine-proposal-page-with-evasive-no-button-and-meme-popups
-Exported from Caffeine project: Romantic Valentine proposal page with evasive No button and meme popups
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

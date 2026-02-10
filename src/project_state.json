@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "Interactive romantic Valentine proposal web page (HTML/CSS/JS) with Yes/No buttons, evasive No behavior, and meme popups; designed to run on iPad Chrome.",
+  "architectural_notes": [
+    "Replace single angry-cat meme popup with a 3-step sequence of meme assets shown on successive 3rd-No events (polite -> firmer -> aggressive), cycling or stopping at final stage as designed.",
+    "Add a subtle highlight/glow/underline animation around the name \"Navera\" within the main question text without changing the overall layout."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Romantic and caring meme-style square image (good-choice-romantic-meme-v3.dim_900x900.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-screen-romantic-valentine-proposal-ui-that-asks-the-user-will-you-be-my-valentine-and-presents-exactly-two-large-buttons-yes-and-no-using-a-pink-and-white-romantic-theme",
+      "title": "Create a single-screen romantic Valentine proposal UI that asks the user: \"Will you be my Valentine?\" and presents exactly two large buttons: \"Yes\" and \"No\", using a pink-and-white romantic theme.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-evasive-behavior-for-the-no-button-so-that-on-hover-mouse-or-touch-pointer-interaction-mobile-tablet-it-moves-to-a-new-position-within-the-visible-viewport-container-making-it-difficult-to-click",
+      "title": "Implement evasive behavior for the \"No\" button so that on hover (mouse) or touch/pointer interaction (mobile/tablet), it moves to a new position within the visible viewport/container, making it difficult to click.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-track-no-interactions-and-on-every-third-successful-no-click-tap-display-an-overlay-modal-showing-an-angry-cat-meme-image-the-overlay-must-be-dismissible-to-continue-interacting-with-the-page",
+      "title": "Track \"No\" interactions and, on every third successful \"No\" click/tap, display an overlay/modal showing an angry cat meme image; the overlay must be dismissible to continue interacting with the page.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-on-yes-click-tap-display-an-overlay-modal-with-a-meme-image-that-includes-the-text-good-choice-english",
+      "title": "On \"Yes\" click/tap, display an overlay/modal with a meme image that includes the text: \"Good choice\" (English).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-simple-delightful-interactions-animation-polish-appropriate-for-a-romantic-page-e-g-subtle-button-animations-soft-transitions-without-adding-additional-app-features-beyond-the-valentine-prompt-and-the-required-meme-popups",
+      "title": "Add simple, delightful interactions/animation polish appropriate for a romantic page (e.g., subtle button animations, soft transitions), without adding additional app features beyond the Valentine prompt and the required meme popups.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-store-the-required-meme-images-as-static-frontend-assets-and-reference-them-directly-from-the-frontend-do-not-fetch-via-backend-place-generated-images-under-frontend-public-assets-generated-and-use-them-in-the-modals",
+      "title": "Store the required meme images as static frontend assets and reference them directly from the frontend (do not fetch via backend). Place generated images under frontend/public/assets/generated and use them in the modals.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-change-the-existing-no-click-modal-behavior-so-that-on-every-3rd-successful-no-click-tap-i-e-counts-3-6-9-the-app-shows-a-meme-popup-that-rotates-through-three-different-memes-in-a-repeating-cycle-escalating-in-tone-from-polite-first-to-more-annoyed-second-to-aggressive-third",
+      "title": "Change the existing \"No\"-click modal behavior so that on every 3rd successful \"No\" click/tap (i.e., counts 3, 6, 9, ...), the app shows a meme popup that rotates through three different memes in a repeating cycle, escalating in tone from polite (first) to more annoyed (second) to aggressive (third).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-ui-for-the-rotating-no-click-meme-modal-so-that-it-uses-english-user-facing-text-and-reflects-the-escalation-level-polite-annoyed-aggressive-in-the-modal-title-and-or-dismiss-button-text-without-adding-any-new-app-features-beyond-the-existing-valentine-prompt-and-meme-popups",
+      "title": "Update the UI for the rotating \"No\"-click meme modal so that it uses English user-facing text and reflects the escalation level (polite/annoyed/aggressive) in the modal title and/or dismiss button text, without adding any new app features beyond the existing Valentine prompt and meme popups.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-two-new-static-meme-images-for-the-no-click-rotation-polite-and-annoyed-store-them-under-frontend-public-assets-generated-and-update-the-frontend-to-reference-all-three-no-click-meme-images-as-static-assets-no-backend-fetch-the-existing-angry-cat-meme-should-be-used-as-the-aggressive-third-meme-in-the-rotation",
+      "title": "Add two new static meme images for the \"No\"-click rotation (polite and annoyed), store them under frontend/public/assets/generated, and update the frontend to reference all three \"No\"-click meme images as static assets (no backend fetch). The existing angry cat meme should be used as the aggressive third meme in the rotation.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-set-of-static-meme-image-assets-under-frontend-public-assets-generated-and-update-the-frontend-to-use-the-new-images-for-1-the-yes-good-choice-modal-image-and-2-the-three-rotating-no-click-escalation-modal-images-polite-annoyed-aggressive",
+      "title": "Add a new set of static meme image assets under frontend/public/assets/generated, and update the frontend to use the new images for: (1) the \"Yes\" (Good choice) modal image and (2) the three rotating \"No\"-click escalation modal images (polite, annoyed, aggressive).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-updated-meme-images-render-correctly-on-ipad-chrome-no-stretching-or-broken-paths-and-preserve-the-existing-layout-responsiveness-and-rounded-shadow-styling-in-the-modals",
+      "title": "Ensure the updated meme images render correctly on iPad Chrome (no stretching or broken paths) and preserve the existing layout responsiveness and rounded/shadow styling in the modals.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-main-question-headline-in-frontend-src-app-tsx-to-include-the-name-navera-and-add-a-clear-romantic-highlight-effect-around-the-word-navera-e-g-soft-glow-subtle-underline-marker-effect-while-preserving-the-existing-responsive-layout-and-overall-valentine-styling",
+      "title": "Update the main question headline in frontend/src/App.tsx to include the name \"Navera\" and add a clear, romantic highlight effect around the word \"Navera\" (e.g., soft glow + subtle underline/marker effect) while preserving the existing responsive layout and overall Valentine styling.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-image-used-in-the-yes-good-choice-modal-with-a-new-static-image-that-feels-romantic-and-caring-and-update-frontend-src-app-tsx-to-reference-the-new-asset-under-assets-generated-while-keeping-the-existing-modal-sizing-object-contain-rounded-corners-and-shadow-styling",
+      "title": "Replace the image used in the \"Yes\" (Good Choice) modal with a new static image that feels romantic and caring, and update frontend/src/App.tsx to reference the new asset under /assets/generated/ while keeping the existing modal sizing (object-contain), rounded corners, and shadow styling.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a simple romantic-themed Valentine proposal page with a pink/white color scheme",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add two options (Yes/No) with interactive behavior: No moves away on hover/touch to avoid being clicked",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Track No interactions and on every third No click show an angry cat meme image",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "On Yes click, show a meme image/message saying \"Good choice\"",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Ensure the page is easily runnable in iPad Chrome using plain HTML/CSS/JavaScript",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "On every 3rd successful \"No\" click, rotate through three different meme popups that escalate from polite to aggressive",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Replace/update the meme images used in the page (asset swap)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add a highlight effect around Navera’s name in the main Valentine question text",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Update the \"Yes\" modal image to a more romantic and caring meme/image",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Romantic Valentine proposal page with evasive No button and meme popups",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

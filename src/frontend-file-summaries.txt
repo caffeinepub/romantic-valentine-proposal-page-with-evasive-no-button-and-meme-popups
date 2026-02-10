@@ -1,0 +1,6 @@
+{
+  "frontend/src/App.tsx": "Main Valentine's Day proposal page with interactive Yes/No buttons, evasive No button behavior, rotating three-meme modal system, and now featuring \"Navera\" in the main question with a romantic highlight effect and updated romantic Good Choice modal image.",
+  "frontend/src/index.css": "Global styles with romantic pink/rose OKLCH color palette for light and dark modes, smooth animations, touch-optimized interactions, and a new romantic glow highlight effect for the Navera name with pulsing animation.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with romantic pink/rose color scheme, custom border radius values, and enhanced shadows for the Valentine's theme.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as no backend queries are needed for this frontend-only application."
+}

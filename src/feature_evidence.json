@@ -1,0 +1,42 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-main-question-headline-in-frontend-src-app-tsx-to-include-the-name-navera-and-add-a-clear-romantic-highlight-effect-around-the-word-navera-e-g-soft-glow-subtle-underline-marker-effect-while-preserving-the-existing-responsive-layout-and-overall-valentine-styling",
+      "featureTitle": "Update the main question headline in frontend/src/App.tsx to include the name \"Navera\" and add a clear, romantic highlight effect around the word \"Navera\" (e.g., soft glow + subtle underline/marker effect) while preserving the existing responsive layout and overall Valentine styling.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-replace-the-image-used-in-the-yes-good-choice-modal-with-a-new-static-image-that-feels-romantic-and-caring-and-update-frontend-src-app-tsx-to-reference-the-new-asset-under-assets-generated-while-keeping-the-existing-modal-sizing-object-contain-rounded-corners-and-shadow-styling",
+      "featureTitle": "Replace the image used in the \"Yes\" (Good Choice) modal with a new static image that feels romantic and caring, and update frontend/src/App.tsx to reference the new asset under /assets/generated/ while keeping the existing modal sizing (object-contain), rounded corners, and shadow styling.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

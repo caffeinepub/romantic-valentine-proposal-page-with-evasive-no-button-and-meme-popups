@@ -1,0 +1,50 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Highlight Navera in headline and update Good Choice modal image",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "summary": "Update the main headline to include “Navera” and visually highlight only that word with a romantic glow + underline/marker effect without breaking responsiveness.",
+      "acceptanceCriteria": [
+        "The main question text includes the name \"Navera\" and remains English.",
+        "Only the name \"Navera\" is visually highlighted (the rest of the headline keeps the existing style).",
+        "The highlight effect is visible in both light and dark mode and does not reduce readability.",
+        "Layout remains responsive across mobile/tablet/desktop and does not overlap the buttons container."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Update the <h1> headline string to include the name “Navera”, wrapping only “Navera” in a dedicated element (e.g., span) and applying a romantic highlight style while preserving existing typography, spacing, and responsive layout. Keep usage of existing shadcn-ui Dialog/Button components unchanged where present. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add a small, reusable CSS class (scoped via Tailwind layers) for the “Navera” highlight effect (soft glow + subtle underline/marker), ensuring it has readable contrast in both light and dark mode and does not introduce layout shifts."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Replace the Good Choice modal image with the new romantic/caring static asset and keep existing modal image sizing and styling.",
+      "acceptanceCriteria": [
+        "The Good Choice modal no longer references /assets/generated/good-choice-meme-v2.dim_900x900.png and instead references the newly added romantic/caring image in frontend/public/assets/generated.",
+        "The image renders correctly on iPad Chrome with no stretching (uses object-contain) and no broken asset paths.",
+        "Existing modal layout, responsiveness, and rounded/shadow styling are preserved."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/good-choice-romantic-meme-v3.dim_900x900.png",
+          "operation": "create",
+          "description": "Add the new romantic and caring meme-style square image asset at this exact path so it can be referenced directly as a static file (no backend fetch)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Update the Good Choice modal image src to reference /assets/generated/good-choice-romantic-meme-v3.dim_900x900.png while preserving the existing object-contain, rounded corners, shadow styling, and modal responsiveness. Keep usage of existing shadcn-ui Dialog/Button components unchanged. Verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}
